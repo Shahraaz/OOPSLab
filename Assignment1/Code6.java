@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Code6
+{
+	public static void main(String []args)
+	{
+		Integer n,x;
+		Scanner input = new Scanner(System.in);
+		n = input.nextInt();
+		TreeMap<Integer,Integer> count = new TreeMap<Integer,Integer>();
+		for(int i=0;i<n;++i)
+		{	
+			x = input.nextInt();
+			Integer temp = count.get(x);
+			count.put(x,(temp == null ? 0 : temp) + 1);
+		}
+		List<Integer> arr = new ArrayList<Integer>();
+		for (Map.Entry<Integer, Integer> entry : count.entrySet()) 
+				arr.add(entry.getKey());
+		System.out.println(Arrays.toString(arr.toArray()));
+	}
+}
