@@ -17,6 +17,8 @@ public class Code2
 		for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
 			if(entry.getValue()%2 == 1) 
 				System.out.println("Key = " + entry.getKey() + ", Count = " + entry.getValue()); 
-		}
-	}
+        }
+        input.close();
+    }
+    
 }

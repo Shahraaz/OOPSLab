@@ -4,7 +4,7 @@ public class Code7
 {
 	public static void main(String []args)
 	{
-		Integer n,x;
+		Integer n;
 		Scanner input = new Scanner(System.in);
 		n = input.nextInt();
 		double sum = 0,mul=1;
@@ -13,6 +13,7 @@ public class Code7
 			sum += 1/(double)mul;
 			mul = mul*i;
 		}
-		System.out.println(sum);
+        System.out.println(sum);
+        input.close();
 	}
 }

@@ -4,7 +4,7 @@ public class Code4
 {
 	public static void main(String []args)
 	{
-		Integer n,x;
+		Integer n;
 		Scanner input = new Scanner(System.in);
 		n = input.nextInt();
 		for(int i =1;i<=n;++i)
@@ -18,6 +18,7 @@ public class Code4
 			for(int j=0;j<i;++j)
 				System.out.print("* ");
 			System.out.println(" ");
-		}
+        }
+        input.close();
 	}
 }

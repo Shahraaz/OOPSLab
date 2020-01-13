@@ -18,5 +18,6 @@ public class Code6
 		for (Map.Entry<Integer, Integer> entry : count.entrySet()) 
 				arr.add(entry.getKey());
 		System.out.println(Arrays.toString(arr.toArray()));
-	}
+        input.close();
+    }
 }

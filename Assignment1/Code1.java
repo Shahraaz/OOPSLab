@@ -26,6 +26,6 @@ public class Code1
 		{
 			System.out.println("No pairs Found");			
 		}
-		
+		input.close();
 	}
 }

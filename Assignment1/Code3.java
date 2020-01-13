@@ -18,6 +18,7 @@ public class Code3
 		for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
 			cnt = cnt + Math.min(2,entry.getValue());
 		}
-		System.out.println(cnt);
+        System.out.println(cnt);
+        input.close();
 	}
 }

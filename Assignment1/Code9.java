@@ -45,6 +45,7 @@ public class Code9
 		List<Integer> l3 = new ArrayList<Integer>();
 		if(sum%3 == 0)
 			partition(0,arr,0,0,0,l1,l2,l3);
-		System.out.println("No");
+        System.out.println("No");
+        input.close();
 	}
 }

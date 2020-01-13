@@ -15,6 +15,7 @@ public class Code8
 			x = input.nextInt();
 			xor = xor^x;
 		}
-		System.out.println(xor);
+        System.out.println(xor);
+        input.close();
 	}
 }
