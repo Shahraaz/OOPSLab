@@ -1,14 +1,13 @@
-import java.lang.reflect.Method;
 import java.util.Scanner;
 import java.util.Stack;
 
 /**
- * element
+ * Element
  */
-class element {
+class Element {
     public int type, index;
 
-    public element(int type, int index) {
+    public Element(int type, int index) {
         this.type = type;
         this.index = index;
     }
@@ -20,20 +19,20 @@ class element {
 public class Code18 {
 
     public static void main(String[] args) {
-        Stack<element> Braces = new Stack<element>();
+        Stack<Element> Braces = new Stack<Element>();
         Scanner in = new Scanner(System.in);
         String str = in.next();
         for (int i = 0; i < str.length(); i++) {
             char curr = str.charAt(i);
             if (curr == '(') {
-                Braces.push(new element(0, i));
+                Braces.push(new Element(0, i));
             } else if (curr == '[') {
-                Braces.push(new element(1, i));
+                Braces.push(new Element(1, i));
             } else if (curr == '{') {
-                Braces.push(new element(2, i));
+                Braces.push(new Element(2, i));
             } else if (curr == ')') {
                 if (Braces.size() > 0) {
-                    element top = Braces.pop();
+                    Element top = Braces.pop();
                     if (top.type == 0) {
                         System.out.println("() found at indexes " + top.index + " " + i);
                     } else {
@@ -46,7 +45,7 @@ public class Code18 {
                 }
             } else if (curr == ']') {
                 if (Braces.size() > 0) {
-                    element top = Braces.pop();
+                    Element top = Braces.pop();
                     if (top.type == 1) {
                         System.out.println("[] found at indexes " + top.index + " " + i);
                     } else {
@@ -59,7 +58,7 @@ public class Code18 {
                 }
             } else if (curr == '}') {
                 if (Braces.size() > 0) {
-                    element top = Braces.pop();
+                    Element top = Braces.pop();
                     if (top.type == 2) {
                         System.out.println("{} found at indexes " + top.index + " " + i);
                     } else {
